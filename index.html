@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/look.css"/>
+    <script src="js/jquery-1.12.3.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>....</title>
+</head>
+<body>
+
+    <h1>SEMESTER GPA CALCULATOR</h1>
+
+    <div id="container">
+        <h2>Easily calculate your GPA for the past semester.</h2>
+
+        <!-- take a paper and draw how the layout will be like-->
+        <form name="marksForm" onsubmit="return calculation()" >
+            <ol>
+                <li>
+                    <input name ="grade1" id="a" type="number" placeholder="ENTER GRADE FOR FIRST SUBJECT"/>
+                </li>
+                <br/>
+                <li>
+                    <input name="grade2" id="b" type="number" placeholder="ENTER GRADE FOR SECOND SUBJECT"/>
+                </li>
+                <br/>
+                <li>
+                    <input name="grade3" type="number" placeholder="ENTER GRADE FOR THIRD SUBJECT"/>
+                </li>
+                <br/>
+                <li>
+                    <input name="grade4" type="number" placeholder="ENTER GRADE FOR FORTH SUBJECT"/>
+                </li>
+                <br/>
+                <li>
+                    <input name="grade5" type="number" placeholder="ENTER GRADE FOR FIFTH SUBJECT"/>
+                </li>
+                <br/>
+                <li>
+                    <input name="grade6" type="number" placeholder="ENTER GRADE FOR SIXTH SUBJECT"/>
+                </li>
+            </ol>
+        <input class="btn" type="submit" value="calculate GPA" />
+        </form>
+    </div>
+
+    <div id="grading_system">
+        <table>
+            <tr>
+                <td>BOUNDRAY</td>
+                <td>90-100</td>
+                <td>80-89</td>
+                <td>70-79</td>
+                <td>60-69</td>
+                <td>50-59</td>
+                <td>40-49</td>
+                <td>0-39</td>
+            </tr>
+
+            <tr>
+                <td>GRADE-POINT</td>
+                <td>4.0</td>
+                <td>3.5</td>
+                <td>3</td>
+                <td>2.5</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

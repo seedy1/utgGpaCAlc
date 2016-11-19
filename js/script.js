@@ -3,8 +3,11 @@
  */
 
 function calculation(){
+
+    var gradePoint;
+    var gpa = 0;
+
     var g1 = parseInt(document.forms["marksForm"]["grade2"].value);
-    //var g2 = parseInt(document.getElementById("b").value);
     var g2 = parseInt(document.forms["marksForm"]["grade2"].value);
     var g3 = parseInt(document.forms["marksForm"]["grade3"].value);
     var g4 = parseInt(document.forms["marksForm"]["grade4"].value);
@@ -13,19 +16,25 @@ function calculation(){
 
     //gp(g1);
 
-    //for(var i =1;i<=6;i++){
-    //
-    //}
+    for(var i =1;i<=6;i++){
 
-    var gp1 = gp(100);
+        if(eval('g'+i) == null || eval('g'+i) == ""){
+            alert("ALL FIELDS MUST BE ENTERED")
+        }else{
+            gradePoint += calcGradePoint( eval('g'+i) );
+        }
+    }
+
+    var gpa = parseInt(gradePoint/6);
+//    var gp2 =
 
     //var sum = g1+g2+g3+g4+g5+g6;
-    alert(gp1);
+    alert(gpa);
 
     return false;
 }
 
-var gp = function(grade){
+var calcGradePoint = function(grade){
 
     if (grade>90){
         gp = 4;

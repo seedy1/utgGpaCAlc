@@ -4,7 +4,7 @@
 
 function calculation(){
 
-    var gradePoint;
+    var gradePoint = 0;
     var gpa = 0;
 
     var g1 = parseInt(document.forms["marksForm"]["grade2"].value);
@@ -25,10 +25,8 @@ function calculation(){
         }
     }
 
-    var gpa = parseInt(gradePoint/6);
-//    var gp2 =
+    var gpa = parseInt(gradePoint) / 6;
 
-    //var sum = g1+g2+g3+g4+g5+g6;
     alert(gpa);
 
     return false;
@@ -52,5 +50,5 @@ var calcGradePoint = function(grade){
         gp = 0;
         //TODO: ask if 'f' is calculated in the GPA
     }
-         return grade;
+         return gp;
 };

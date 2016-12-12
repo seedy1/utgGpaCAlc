@@ -15,7 +15,7 @@
         <h2>Easily calculate your GPA for the past semester.</h2>
 
         <!-- take a paper and draw how the layout will be like-->
-        <form name="marksForm" onsubmit="return calculation()" >
+        <form id="form" name="marksForm" onsubmit="return calculation()" >
             <ol>
                 <li>
                     <input name ="grade1" id="a" type="number" placeholder="ENTER GRADE FOR FIRST SUBJECT"/>
@@ -41,7 +41,11 @@
                     <input name="grade6" type="number" placeholder="ENTER GRADE FOR SIXTH SUBJECT"/>
                 </li>
             </ol>
-        <input class="btn" type="submit" value="calculate GPA" />
+                <div id="buttons">
+                    <input class="btn" type="submit" value="calculate GPA" />
+                    <input class="btn" type="button" onclick="clearFields()" value="clear all fields" />
+                </div>
+
 
         </form>
     </div>

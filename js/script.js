@@ -34,21 +34,25 @@ function calculation(){
 
 var calcGradePoint = function(grade){
 
-    if (grade>90){
+    if (grade>=90){
         gp = 4;
-    }else if(grade>80){
+    }else if(grade>=80){
         gp = 3.5;
-    }else if(grade>70){
+    }else if(grade>=70){
         gp = 3;
-    }else if(grade>60){
+    }else if(grade>=60){
         gp = 2.5;
-    }else if(grade>50){
+    }else if(grade>=50){
         gp = 2;
-    }else if(grade>40){
+    }else if(grade>=40){
         gp = 1;
     }else if(grade>0){
         gp = 0;
         //TODO: ask if 'f' is calculated in the GPA
     }
          return gp;
-};
+}
+
+function clearFields(){
+document.getElementById("form").reset();
+}

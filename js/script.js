@@ -27,7 +27,10 @@ function calculation(){
 
     var gpa = parseInt(gradePoint) / 6;
 
-    alert(gpa);
+    //alert(gpa);
+
+    var results = document.getElementById('results');
+    results.innerHTML = '<h4>YOUR GPA = ' +gpa+' </h4>';
 
     return false;
 }

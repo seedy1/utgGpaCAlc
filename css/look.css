@@ -7,6 +7,7 @@ body{
     width: 100%;
     font-family: cursive, sans-serif, serif;
     font-weight: bold;
+    background-color: antiquewhite;
 }
 h1{
     text-align: center;
@@ -17,13 +18,13 @@ h1{
     margin-left: 20%;
     width: 50%;
     padding-top: 10px;
-    height: 470px;
+    height: 536px;
     /*overflow: scroll;*/
     text-align: center;
     background-color: #21801b;
 }
-ul li{
-    /*list-style-type: none;*/
+form ol li{
+    list-style: none;
 }
 
 ol li input{
@@ -39,6 +40,23 @@ ol li input{
 .buttons{
     display: inline;
 }
+#grading_system{
+    padding: 15px 3px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, td{
+    border: 1px solid green;
+}
+
+td{
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+}
 
 @media screen and (max-width: 500px){
     body{
@@ -48,8 +66,19 @@ ol li input{
         margin-left: 20%;
         width: 50%;
         padding-top: 10px;
-        height: 520px;
+        height: 560px;
         text-align: center;
         background-color: grey;
     }
+}
+
+form #results h4{
+    color: red;
+    text-decoration: dashed;
+}
+
+footer{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
 }

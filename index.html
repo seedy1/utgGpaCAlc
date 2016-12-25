@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/look.css"/>
-    <script src="js/jquery-1.12.3.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPA Calculator</title>
 </head>
@@ -15,7 +14,7 @@
         <h2>Easily calculate your GPA for the past semester.</h2>
 
         <!-- take a paper and draw how the layout will be like-->
-        <form id="form" name="marksForm" onsubmit="return calculation()" >
+        <form id="form" name="marksForm" onsubmit="return (validate() || calculation() )" >
             <ol>
                 <li>
                     <input name ="grade1" id="a" type="number" placeholder="ENTER GRADE FOR FIRST SUBJECT"/>

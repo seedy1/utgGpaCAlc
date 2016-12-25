@@ -18,11 +18,7 @@ function calculation(){
 
     for(var i =1;i<=6;i++){
 
-        if(eval('g'+i) == null || eval('g'+i) == ""){
-            alert("ALL FIELDS MUST BE ENTERED")
-        }else{
-            gradePoint += calcGradePoint( eval('g'+i) );
-        }
+        gradePoint += calcGradePoint( eval('g'+i) );
     }
 
     var gpa = parseInt(gradePoint) / 6;
@@ -51,11 +47,37 @@ var calcGradePoint = function(grade){
         gp = 1;
     }else if(grade>0){
         gp = 0;
-        //TODO: ask if 'f' is calculated in the GPA
     }
          return gp;
 }
 
 function clearFields(){
 document.getElementById("form").reset();
+}
+
+function validate(){
+    if(document.forms.form.grade1.value == ""){
+        alert("THE FIRST FIELD MUST BE FILLED");
+        return false;
+    }
+    else if(document.forms.form.grade2.value == ""){
+        alert("THE SECOND FIELD MUST BE FILLED");
+        return false;
+    }
+    else if(document.forms.form.grade3.value == ""){
+        alert("THE THIRD FIELD MUST BE FILLED");
+        return false;
+    }
+    else if(document.forms.form.grade4.value == ""){
+        alert("THE FOURTH FIELD MUST BE FILLED");
+        return false;
+    }
+    else if(document.forms.form.grade5.value == ""){
+        alert("THE FIFTH FIELD MUST BE FILLED");
+        return false;
+    }
+    else if(document.forms.form.grade6.value == ""){
+        alert("THE SIXTH FIELD MUST BE FILLED");
+        return false;
+    }
 }
